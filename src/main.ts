@@ -12,8 +12,8 @@ const updatedConfig = {
   ...aws_exports,
   oauth: {
     ...aws_exports.oauth,
-    redirectSignIn: 'http://localhost:4200/in/',
-    redirectSignOut: 'http://localhost:4200/out/',
+    redirectSignIn: aws_exports.oauth.redirectSignIn.split(",")[0],
+    redirectSignOut: aws_exports.oauth.redirectSignOut.split(",")[0],
   },
 };
 
