@@ -1,4 +1,4 @@
-import { enableProdMode } from '@angular/core';
+import { enableProdMode, isDevMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 import { AppModule } from './app/app.module';
@@ -11,8 +11,8 @@ const updatedConfig = {
   ...aws_exports,
   oauth: {
     ...aws_exports.oauth,
-    redirectSignIn: aws_exports.oauth.redirectSignIn.split(",")[1],
-    redirectSignOut: aws_exports.oauth.redirectSignOut.split(",")[0],
+    redirectSignIn: isDevMode() ? aws_exports.oauth.redirectSignIn.split(",")[1] : aws_exports.oauth.redirectSignIn.split(",")[0],
+    redirectSignOut: isDevMode() ? aws_exports.oauth.redirectSignOut.split(",")[1] : aws_exports.oauth.redirectSignOut.split(",")[0],
   },
 };
 

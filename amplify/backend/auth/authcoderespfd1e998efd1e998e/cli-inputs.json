@@ -71,10 +71,10 @@
     },
     "breakCircularDependency": true,
     "dependsOn": [],
-    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"http://localhost:4200/\",\"http://localhost:4200/in/\"],\"LogoutURLs\":[\"http://localhost:4200/\",\"http://localhost:4200/out/\"]}",
     "parentStack": {
       "Ref": "AWS::StackId"
     },
-    "permissions": []
+    "permissions": [],
+    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"https://10060.d1o7cvx0e60ugo.amplifyapp.com/in/\",\"http://localhost:4200/in/\"],\"LogoutURLs\":[\"https://10060.d1o7cvx0e60ugo.amplifyapp.com/out/\",\"http://localhost:4200/out/\"]}"
   }
 }
