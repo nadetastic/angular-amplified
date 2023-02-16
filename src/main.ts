@@ -7,6 +7,10 @@ import { environment } from './environments/environment';
 import { Amplify, Auth } from 'aws-amplify';
 import aws_exports from './aws-exports';
 
+if (environment.production) {
+  enableProdMode();
+}
+
 const updatedConfig = {
   ...aws_exports,
   oauth: {
@@ -20,9 +24,7 @@ Amplify.configure(updatedConfig);
 
 console.log('======>',Auth.configure())
 
-if (environment.production) {
-  enableProdMode();
-}
+
 
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
