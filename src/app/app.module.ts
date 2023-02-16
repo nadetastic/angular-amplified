@@ -13,10 +13,9 @@ import { AmplifyAuthenticatorModule } from '@aws-amplify/ui-angular';
 
 
 const routes: Routes = [
-  { path: 'home', component: AppComponent },
   { path: 'in', component: InComponent },
   { path: 'out', component: OutComponent },
-  { path: '',   redirectTo: '/home', pathMatch: 'full' }, // redirect to `first-component`
+  { path: '',   redirectTo: '/', pathMatch: 'full' },
 
 ]
 
