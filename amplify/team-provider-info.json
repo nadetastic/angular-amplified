@@ -1,0 +1,22 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-authcoderesp-dev-110639-authRole",
+      "UnauthRoleArn": "arn:aws:iam::524405517764:role/amplify-authcoderesp-dev-110639-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::524405517764:role/amplify-authcoderesp-dev-110639-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-authcoderesp-dev-110639-deployment",
+      "UnauthRoleName": "amplify-authcoderesp-dev-110639-unauthRole",
+      "StackName": "amplify-authcoderesp-dev-110639",
+      "StackId": "arn:aws:cloudformation:us-east-1:524405517764:stack/amplify-authcoderesp-dev-110639/48aae4f0-ae1c-11ed-82e3-1289f01c0ed5",
+      "AmplifyAppId": "d1o7cvx0e60ugo"
+    },
+    "categories": {
+      "auth": {
+        "authcoderespfd1e998efd1e998e": {
+          "googleClientId": "541264766868-vei0r49i7oq6f9qdoh4kmv8vca3i00p7.apps.googleusercontent.com"
+        }
+      }
+    }
+  }
+}

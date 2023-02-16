@@ -1,0 +1,42 @@
+{
+  "auth": {
+    "authcoderespfd1e998efd1e998e": {
+      "customAuth": false,
+      "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [],
+          "passwordPolicyMinLength": 8
+        },
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "socialProviders": [
+          "GOOGLE"
+        ],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_auth_authcoderespfd1e998efd1e998e_googleClientId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "authcoderespfd1e998efd1e998e"
+        }
+      ]
+    }
+  }
+}
