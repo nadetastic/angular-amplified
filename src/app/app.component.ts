@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { signIn, ConfirmSignInInput, signUp, confirmSignUp } from 'aws-amplify/auth'
+import { signIn, ConfirmSignInInput, signUp, confirmSignUp, signOut } from 'aws-amplify/auth'
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -42,6 +42,15 @@ export class AppComponent {
       })
       console.log(res)
     } catch(e) {
+      console.log(e)
+    }
+  }
+
+  async handleSignOut() {
+    try {
+      await signOut()
+      console.log('signed out')
+    } catch(e){
       console.log(e)
     }
   }
