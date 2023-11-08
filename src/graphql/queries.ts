@@ -8,35 +8,41 @@ type GeneratedQuery<InputType, OutputType> = string & {
   __generatedQueryOutput: OutputType;
 };
 
-export const getTodo = /* GraphQL */ `query GetTodo($id: ID!) {
-  getTodo(id: $id) {
+export const getRestaurant = /* GraphQL */ `query GetRestaurant($id: ID!) {
+  getRestaurant(id: $id) {
     id
     name
     description
+    city
     createdAt
     updatedAt
-    owner
     __typename
   }
 }
-` as GeneratedQuery<APITypes.GetTodoQueryVariables, APITypes.GetTodoQuery>;
-export const listTodos = /* GraphQL */ `query ListTodos(
-  $filter: ModelTodoFilterInput
+` as GeneratedQuery<
+  APITypes.GetRestaurantQueryVariables,
+  APITypes.GetRestaurantQuery
+>;
+export const listRestaurants = /* GraphQL */ `query ListRestaurants(
+  $filter: ModelRestaurantFilterInput
   $limit: Int
   $nextToken: String
 ) {
-  listTodos(filter: $filter, limit: $limit, nextToken: $nextToken) {
+  listRestaurants(filter: $filter, limit: $limit, nextToken: $nextToken) {
     items {
       id
       name
       description
+      city
       createdAt
       updatedAt
-      owner
       __typename
     }
     nextToken
     __typename
   }
 }
-` as GeneratedQuery<APITypes.ListTodosQueryVariables, APITypes.ListTodosQuery>;
+` as GeneratedQuery<
+  APITypes.ListRestaurantsQueryVariables,
+  APITypes.ListRestaurantsQuery
+>;

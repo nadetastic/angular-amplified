@@ -1,6 +1,6 @@
 projects:
   graphql:
-    schemaPath: amplify/backend/api/graphql/build/schema.graphql
+    schemaPath: amplify/backend/api/anglamp/build/schema.graphql
     includes:
       - src/graphql/**/*.ts
     excludes:
@@ -13,3 +13,6 @@ projects:
         region: us-east-1
         apiId: null
         maxDepth: 2
+extensions:
+  amplify:
+    version: 3

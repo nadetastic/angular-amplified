@@ -28,4 +28,10 @@
         <div>City: {{ restaurant.city }}</div>
         <hr />
       </div>
+
+      <div>
+        @for (restaurant of restaurants?.items; track restaurant.id) {
+          <li>{{ restaurant.name }}</li>
+        }
+      </div>
    

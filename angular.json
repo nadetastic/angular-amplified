@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angular-amplified:build:production"
+              "buildTarget": "angular-amplified:build:production"
             },
             "development": {
-              "browserTarget": "angular-amplified:build:development"
+              "buildTarget": "angular-amplified:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-amplified:build"
+            "buildTarget": "angular-amplified:build"
           }
         },
         "test": {

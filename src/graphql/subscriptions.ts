@@ -8,57 +8,54 @@ type GeneratedSubscription<InputType, OutputType> = string & {
   __generatedSubscriptionOutput: OutputType;
 };
 
-export const onCreateTodo = /* GraphQL */ `subscription OnCreateTodo(
-  $filter: ModelSubscriptionTodoFilterInput
-  $owner: String
+export const onCreateRestaurant = /* GraphQL */ `subscription OnCreateRestaurant(
+  $filter: ModelSubscriptionRestaurantFilterInput
 ) {
-  onCreateTodo(filter: $filter, owner: $owner) {
+  onCreateRestaurant(filter: $filter) {
     id
     name
     description
+    city
     createdAt
     updatedAt
-    owner
     __typename
   }
 }
 ` as GeneratedSubscription<
-  APITypes.OnCreateTodoSubscriptionVariables,
-  APITypes.OnCreateTodoSubscription
+  APITypes.OnCreateRestaurantSubscriptionVariables,
+  APITypes.OnCreateRestaurantSubscription
 >;
-export const onUpdateTodo = /* GraphQL */ `subscription OnUpdateTodo(
-  $filter: ModelSubscriptionTodoFilterInput
-  $owner: String
+export const onUpdateRestaurant = /* GraphQL */ `subscription OnUpdateRestaurant(
+  $filter: ModelSubscriptionRestaurantFilterInput
 ) {
-  onUpdateTodo(filter: $filter, owner: $owner) {
+  onUpdateRestaurant(filter: $filter) {
     id
     name
     description
+    city
     createdAt
     updatedAt
-    owner
     __typename
   }
 }
 ` as GeneratedSubscription<
-  APITypes.OnUpdateTodoSubscriptionVariables,
-  APITypes.OnUpdateTodoSubscription
+  APITypes.OnUpdateRestaurantSubscriptionVariables,
+  APITypes.OnUpdateRestaurantSubscription
 >;
-export const onDeleteTodo = /* GraphQL */ `subscription OnDeleteTodo(
-  $filter: ModelSubscriptionTodoFilterInput
-  $owner: String
+export const onDeleteRestaurant = /* GraphQL */ `subscription OnDeleteRestaurant(
+  $filter: ModelSubscriptionRestaurantFilterInput
 ) {
-  onDeleteTodo(filter: $filter, owner: $owner) {
+  onDeleteRestaurant(filter: $filter) {
     id
     name
     description
+    city
     createdAt
     updatedAt
-    owner
     __typename
   }
 }
 ` as GeneratedSubscription<
-  APITypes.OnDeleteTodoSubscriptionVariables,
-  APITypes.OnDeleteTodoSubscription
+  APITypes.OnDeleteRestaurantSubscriptionVariables,
+  APITypes.OnDeleteRestaurantSubscription
 >;

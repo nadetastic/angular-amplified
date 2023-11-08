@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { signIn, ConfirmSignInInput } from 'aws-amplify/auth'
+import { signIn, ConfirmSignInInput, signUp, confirmSignUp } from 'aws-amplify/auth'
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,6 +7,8 @@ import { signIn, ConfirmSignInInput } from 'aws-amplify/auth'
 })
 export class AppComponent {
   title = 'angular-amplified';
+
+  code = ''
 
   async handleSignIn(){
     try {
@@ -16,6 +18,30 @@ export class AppComponent {
       })
       console.log(res)
     } catch(e){
+      console.log(e)
+    }
+  }
+
+  async handleSignUp() {
+    try {
+      const res = await signUp({
+        username: 'dkkiuna11@gmail.com',
+        password: 'abcd1234',
+      })
+      console.log(res)
+    } catch(e){
+      console.log(e)
+    }
+  }
+
+  async handleConfirmSignUp() {
+    try {
+      const res = await confirmSignUp({
+        username: 'dkkiuna11@gmail.com',
+        confirmationCode: '038646'
+      })
+      console.log(res)
+    } catch(e) {
       console.log(e)
     }
   }
