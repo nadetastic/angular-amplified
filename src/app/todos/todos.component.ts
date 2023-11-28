@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { generateClient, Client } from 'aws-amplify/api';
-import { Schema } from '../../../amplify/data/resource';
+import { generateClient, type Client } from 'aws-amplify/api';
+// import { Schema } from '../../../amplify/data/resource';
 
 
 @Component({
@@ -13,10 +13,10 @@ import { Schema } from '../../../amplify/data/resource';
 })
 export class TodosComponent {
 
-  public client: Client<Schema>;
+  public client: Client;
 
   constructor(){
-    this.client = generateClient<Schema>()
+    this.client = generateClient()
   }
 
 }
