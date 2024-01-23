@@ -1,6 +1,6 @@
 {
   "auth": {
-    "authcoderespfd1e998efd1e998e": {
+    "federatedAuth": {
       "customAuth": false,
       "dependsOn": [],
       "frontendAuthConfig": {
@@ -16,7 +16,8 @@
           "EMAIL"
         ],
         "socialProviders": [
-          "GOOGLE"
+          "GOOGLE",
+          "APPLE"
         ],
         "usernameAttributes": [
           "EMAIL"
@@ -30,11 +31,11 @@
     }
   },
   "parameters": {
-    "AMPLIFY_auth_authcoderespfd1e998efd1e998e_googleClientId": {
+    "AMPLIFY_auth_federatedAuth_googleClientId": {
       "usedBy": [
         {
           "category": "auth",
-          "resourceName": "authcoderespfd1e998efd1e998e"
+          "resourceName": "federatedAuth"
         }
       ]
     }

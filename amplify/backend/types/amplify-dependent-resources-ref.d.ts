@@ -1,6 +1,6 @@
 export type AmplifyDependentResourcesAttributes = {
   "auth": {
-    "authcoderespfd1e998efd1e998e": {
+    "federatedAuth": {
       "AppClientID": "string",
       "AppClientIDWeb": "string",
       "GoogleWebClient": "string",
